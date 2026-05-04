@@ -1,0 +1,152 @@
+:root {
+    --primary: #8b0000;
+    --secondary: #f4a261;
+    --accent: #264653;
+    --light: #fffaf3;
+    --text: #2b2b2b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: var(--light);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: var(--accent);
+    color: white;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+header h1 {
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--secondary);
+}
+
+.container {
+    padding: 130px 40px 80px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.hero img {
+    width: 260px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.hero-text h2 {
+    font-size: 30px;
+    color: var(--primary);
+}
+
+.hero-text p {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 22px;
+    background: var(--primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background: var(--secondary);
+    color: #000;
+}
+
+section {
+    margin-bottom: 50px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+h3 {
+    margin-bottom: 10px;
+    color: var(--accent);
+}
+
+ul {
+    margin-left: 20px;
+}
+
+.images {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.images img {
+    width: 48%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.images img:hover {
+    transform: scale(1.03);
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: var(--accent);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 13px;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .images img {
+        width: 100%;
+    }
+}
